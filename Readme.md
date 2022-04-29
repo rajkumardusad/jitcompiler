@@ -1,7 +1,7 @@
 ## JITCompiler
 
 JIT Compiler is a online code compiler for students and developer's.
-JIT Compiler offers free online code compiler to everyone, you can compile and run more than 40+ most popular programming languages in your browser just-in-time using jitcompiler.
+You can run more than 40+ most popular programming languages in your browser just-in-time using jitcompiler.
 
 Our online compiler has a user friendly text editor with live auto-suggestion and syntax highlighting features.
 You can write compile and run your code in single click in your browser even in your phone using jitcompiler.
