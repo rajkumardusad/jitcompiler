@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>{{title}}</title>
+  <meta name="robots" content="noindex">
+  <meta name="googlebot" content="noindex">
+  {{> meta }}
+  {{> style }}
+</head>
+
+<body class="bg-white dark:bg-gray-900">
+  <!-- Container -->
+  <div class="w-full">
+    {{> header }}
+
+    <div class="w-full min-h-screen pt-4 pb-8 dark:bg-gray-800">
+      <div class="w-full max-w-6xl px-4 md:px-6 mx-auto my-4 lg:my-6">
+        <div class="w-full">
+          <h2 class="text-xl font-bold">Privacy policy</h2>
+          <span class="block w-8 h-1.5 bg-blue-600 rounded-md my-2"></span>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-4">
+        <div class="w-full max-w-6xl flex-grow px-4 md:px-6 mx-auto">
+          <p class="text-base leading-relaxed">This privacy policy is about what, how and why we collect information
+            about you (Visitor/Customer) and how we use that information.</p>
+          <h2 class="text-lg font-bold pt-6 pb-4">About Us</h2>
+          <p class="text-base leading-relaxed">JITCompiler is a free online code execution platform/online code compiler
+            for students and developer's. we provide online free just-in-time code execution platform for learning
+            purpose.</p>
+          <h2 class="text-lg font-bold pt-6 pb-4">What information we collect?</h2>
+          <p class="text-base leading-relaxed">When you visit our website (jitcompiler.com) we collect some information
+            about you, but don't worry we doesn't collect/store any personal information about visitors. We collect only
+            following information form you.</p>
+          <ul class="mx-6 my-4 list-disc text-base leading-relaxed">
+            <li>We store traffic related information like your ip address and browser information only.</li>
+            <li>We collect some information of our compiler, that information is related to code execution only like
+              what language is executing and compiler related stats.</li>
+            <li>We doesn't collect any personal information of our visitors.</li>
+          </ul>
+          <h2 class="text-lg font-bold pt-6 pb-4">How we use collected information?</h2>
+          <p class="text-base leading-relaxed">We only store traffic related information, so we that information to
+            improve our user experience and services.</p>
+          <h2 class="text-lg font-bold pt-6 pb-4">Cookies and Storage?</h2>
+          <p class="text-base leading-relaxed">We use browser local storage to store your last executed code for your
+            convenience.</p>
+          <p class="text-base leading-relaxed">Google use cookies to serve ads on our website and to improve their
+            advertisement experience.</p>
+        </div>
+      </div>
+    </div>
+
+    {{> footer }}
+  </div>
+  {{> script }}
+</body>
+
+</html>

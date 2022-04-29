@@ -1,0 +1,33 @@
+{
+  "name": "JITCompiler",
+  "short_name": "JITCompiler",
+  "description": "Compile your code just in time.",
+  "lang": "en-US",
+  "start_url": "/compiler",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/img/logo/logo-92x92.png",
+      "sizes": "92x92",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/logo/logo-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/logo/logo-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/logo/logo-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+<!-- Header -->
+<div class="w-full bg-white dark:bg-gray-800">
+  <div class="w-full max-w-6xl h-16 xl:h-20 flex flex-wrap items-center justify-between px-4 md:px-6 mx-auto">
+    <div class="flex items-center">
+      <a href="/">
+        <span class="text-lg font-bold">{{appName}}</span>
+      </a>
+    </div>
+
+    <div class="flex items-center">
+      <div class="hidden md:inline-block w-auto">
+        <div class="flex flex-wrap items-center gap-6 lg:gap-8 text-sm font-semibold">
+          <a href="/compiler" class="hover:text-blue-600">Compiler</a>
+          <!-- a href="/#services" class="hover:text-blue-600">Services</a -->
+          <a href="/#features" class="hover:text-blue-600">Features</a>
+          <a href="/#languages" class="hover:text-blue-600">Languages</a>
+          <!-- a href="/docs" class="hover:text-blue-600">Documentation</a -->
+          <a href="/contact" class="hover:text-blue-600">Contact</a>
+        </div>
+      </div>
+      <div
+        class="hidden md:hidden absolute w-full left-0 top-0 right-0 bg-white dark:bg-gray-800 mt-16 border-t border-gray-200 dark:border-gray-700 shadow-md sm-nav-menu">
+        <div class="mx-4 block space-y-4 pt-4 pb-5 text-base font-semibold">
+          <a href="/compiler" class="block hover:text-blue-600">Compiler</a>
+          <!-- a href="/#services" class="block hover:text-blue-600">Services</a -->
+          <a href="/#features" class="block hover:text-blue-600">Features</a>
+          <a href="/#languages" class="block hover:text-blue-600">Languages</a>
+          <!-- a href="/docs" class="block hover:text-blue-600">Documentation</a -->
+          <a href="/contact" class="block hover:text-blue-600">Contact</a>
+        </div>
+      </div>
+      <div class="md:hidden p-1"><i class="fa fa-bars text-lg menu-icon"></i></div>
+    </div>
+  </div>
+</div>
+
+<div class="h-72 md:h-80 lg:h-96 bg-gray-50 dark:bg-gray-900">
+  <div class="w-full max-w-6xl h-full flex items-center gap-4 px-4 md:px-6 mx-auto">
+    <div class="flex-grow">
+      {{#if language}}
+      <h1 class="hidden md:block md:w-80 text-2xl font-bold">Compile and run {{lowerCase languageName}} program
+        online in browser</h1>
+      <h1 class="md:hidden text-2xl font-bold">Online {{languageName}} Compiler</h1>
+      <a href="/compiler?lang={{language}}"
+        class="block w-24 bg-blue-600 focus:bg-blue-700 focus:outline-none px-4 py-2 my-4 text-white text-center font-bold rounded-md">Compiler</a>
+      {{else}}
+      <h1 class="hidden md:block md:w-80 text-2xl font-bold">Compile and run your code online in browser</h1>
+      <h1 class="md:hidden text-2xl font-bold">Online Code Compiler</h1>
+      <a href="/compiler"
+        class="block w-24 bg-blue-600 focus:bg-blue-700 focus:outline-none px-4 py-2 my-4 text-white text-center font-bold rounded-md">Compiler</a>
+      {{/if}}
+    </div>
+    <div class="flex-shrink-0">
+      <div class="flex flex-wrap items-center">
+        <img class="w-44 md:hidden rounded-lg shadow-md" src="/img/m-scr-w.jpg"
+          alt="Online Code Compiler - JITCompiler" />
+        <img class="hidden md:block md:w-96 rounded-xl shadow-md" src="/img/d-scr-w.png"
+          alt="Online Code Compiler - JITCompiler" />
+      </div>
+    </div>
+  </div>
+</div>

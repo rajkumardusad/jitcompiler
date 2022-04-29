@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>{{title}}</title>
+  {{> meta }}
+  {{> style }}
+</head>
+
+<body class="bg-white dark:bg-gray-900">
+  <!-- Container -->
+  <div class="w-full">
+    {{> header }}
+
+    <div class="w-full py-4 dark:bg-gray-800" id="features">
+      <div class="w-full max-w-6xl px-4 md:px-6 mx-auto my-4 lg:my-6">
+        <div class="w-full">
+          <h2 class="text-xl font-bold">Features</h2>
+          <span class="block w-8 h-1.5 bg-blue-600 rounded-md my-2"></span>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-4">
+        <div class="w-full max-w-6xl flex-grow px-4 md:px-6 mx-auto">
+          <p class="text-base leading-relaxed">JIT Compiler is a online code compiler for
+            students and developer's. JIT Compiler offers free online code compiler to
+            everyone, you can compile and run more than 30+ most popular programming languages in your browser
+            just-in-time using jitcompiler.
+            Our online compiler has a user friendly text editor with live auto-suggestion and syntax highlighting features. You can write compile and run your code in single click in your browser even in your phone using jitcompiler.</p>
+          <ul class="mx-6 lg:mx-8 my-4 list-disc text-base leading-relaxed">
+            <li>Free online compiler.</li>
+            <li>Almost every popular programming language support.</li>
+            <li>Easy and clean UI with dark mode.</li>
+            <li>Automatically save your last executed code on your browser.</li>
+            <li>Press CTRL+ENTER to execute your code.</li>
+            <li>Download your source code.</li>
+            <!-- li>Compiler API.</li>
+            <li>Embedded compiler in browser.</li -->
+          </ul>
+        </div>
+        <div class="w-full flex-shrink-0 text-center bg-gray-50 dark:bg-gray-900 py-6 md:py-8">
+          <div class="container mx-auto">
+            <img class="w-4/6 md:hidden mx-auto rounded-lg shadow-md" src="/img/features-m-w.jpg" alt="Online Code Compiler - JITCompiler"/>
+            <img class="hidden md:block md:w-9/12 lg:w-6/12 mx-auto rounded-xl shadow-md" src="/img/features-d-w.png" alt="Online Code Compiler - JITCompiler"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full py-4 dark:bg-gray-800" id="languages">
+      <div class="w-full max-w-6xl px-4 md:px-6 mx-auto my-4 lg:my-6">
+        <div class="w-full">
+          <h2 class="text-xl font-bold">Supported Languages</h2>
+          <span class="block w-8 h-1.5 bg-blue-600 rounded-md my-2"></span>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-4">
+        <div class="w-full max-w-6xl flex-grow px-4 md:px-6 mx-auto">
+          <p class="text-base leading-relaxed">JIT Compiler support almost every most popular and commonly used
+            programming languages. You can compile and run more than 30+ programming languages just-in-time in your
+            browser on jitcompiler.</p>
+
+          <div
+            class="grid grid-cols-3 md:grid-cols-6 items-center justify-around gap-x-4 gap-y-7 md:gap-y-8 pt-8 md:pt-10 pb-10 md:pb-12 md:px-14">
+            <a class="flex items-center justify-center" href="/compiler/python3">
+              <img class="w-14" src="/img/python.png" alt="Online Python Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/javascript">
+              <img class="w-14 rounded-xl" src="/img/javascript.png" alt="Online JavaScript Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/typescript">
+              <img class="w-14 rounded-xl" src="/img/typescript.png" alt="Online TypeScript Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/c">
+              <img class="w-14" src="/img/c.png" alt="Online C Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/cpp">
+              <img class="w-14" src="/img/cpp.png" alt="Online C++ Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/java">
+              <img class="h-24" src="/img/java.png" alt="Online Java Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/dart">
+              <img class="w-14 rounded-xl" src="/img/dart.jpeg" alt="Online Dart Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/swift">
+              <img class="w-14 rounded-xl" src="/img/swift.jpeg" alt="Online Swift Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/golang">
+              <img class="w-20" src="/img/golang.png" alt="Online Golang Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/rust">
+              <img class="w-16" src="/img/rust.png" alt="Online Rust Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/php">
+              <img class="w-20" src="/img/php.png" alt="Online PHP Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/csharp">
+              <img class="w-24 " src="/img/csharp.png" alt="Online C# Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/lua">
+              <img class="w-14 rounded-xl" src="/img/lua.png" alt="Online Lua Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/shell">
+              <img class="w-14 rounded-xl" src="/img/bash.png" alt="Online Bash Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/assembly">
+              <img class="w-14 rounded-xl" src="/img/asm.png" alt="Online Assembly Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/haskell">
+              <img class="w-16 rounded-md" src="/img/haskell.png" alt="Online Haskell Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/groovy">
+              <img class="w-20" src="/img/groovy.png" href="Online Groovy Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/html">
+              <img class="w-16" src="/img/html.png" alt="Online HTML Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/ruby">
+              <img class="w-12" src="/img/ruby.png" alt="Online Ruby Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/julia">
+              <img class="w-16" src="/img/julia.png" alt="Online Julia Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/fortran">
+              <img class="w-12 rounded-xl" src="/img/fortran.png" alt="Online Fortran Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/perl">
+              <img class="w-14" src="/img/perl.png" alt="Online Perl Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/elixir">
+              <img class="w-20 rounded-lg" src="/img/elixir.jpeg" alt="Online Elixir Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/lisp">
+              <img class="w-14" src="/img/lisp.png" alt="Online Lisp Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/erlang">
+              <img class="w-14" src="/img/erlang.png" alt="Online Erlang Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/objective-c">
+              <img class="w-16 rounded-md" src="/img/objective-c.png" alt="Online Objective-C Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/cobol">
+              <img class="w-16 rounded-md" src="/img/cobol.jpeg" alt="Online Cobol Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/tcl">
+              <img class="h-16 rounded-lg" src="/img/tcl.png" alt="Online TCL Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/nim">
+              <img class="w-14 rounded-xl" src="/img/nim.png" alt="Online Nim Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/r">
+              <img class="w-14 rounded-md" src="/img/r.jpeg" alt="Online R Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/vb">
+              <img class="w-12 rounded-lg" src="/img/vb.png" alt="Online VB.NET Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/scala">
+              <img class="w-16 rounded-md" src="/img/scala.png" alt="Online Scala Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/mysql">
+              <img class="w-14 rounded-md" src="/img/mysql.png" alt="Online MySQL Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/crystal">
+              <img class="w-12 rounded-xl" src="/img/crystal.png" alt="Online Crystal Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/sqlite3">
+              <img class="w-16 rounded-md" src="/img/sqlite3.png" alt="Online SQLite3 Compiler - JITCompiler">
+            </a>
+            <a class="flex items-center justify-center" href="/compiler/ocaml">
+              <img class="w-12 rounded-md" src="/img/ocaml.jpeg" alt="Online Ocaml Compiler - JITCompiler">
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    {{> footer }}
+  </div>
+  {{> script }}
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>{{title}}</title>
+  {{> meta }}
+  {{> style }}
+</head>
+
+<body class="bg-white dark:bg-gray-900 overflow-hidden">
+  <!-- Container -->
+  <div class="w-full h-screen flex flex-col overflow-hidden">
+
+    <!-- Header -->
+    <div
+      class="w-full h-16 flex flex-shrink-0 items-center justify-between px-4 lg:px-6 border-b border-gray-200 dark:border-gray-800">
+
+      <a href="/" class="flex items-center cursor-pointer">
+        <h1 class="text-lg font-bold">{{appName}}</h1>
+      </a>
+
+      <div class="flex items-center gap-3 md:gap-5">
+
+        <button class="w-9 h-8 hidden md:flex items-center justify-center focus:outline-none rounded-md"
+          id="orientation">
+          <i class="fas fa-columns"></i>
+        </button>
+
+        <div
+          class="relative px-2.5 py-1 bg-white dark:bg-gray-800 border dark:border-gray-800 border-gray-200 rounded-md dropdown-menu-icon">
+          <div class="w-full h-full flex items-center justify-center cursor-pointer">
+            <span class="text-sm" id="language" data-language="{{language}}">JavaScript</span>
+            <!-- Heroicon name: solid/chevron-down -->
+            <svg class="-mr-1.5 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+              aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd" />
+            </svg>
+          </div>
+          <!-- Dropdown menu container -->
+          <div
+            class="hidden origin-top-right absolute mt-5 py-1 w-44 rounded-md shadow-md bg-white dark:bg-gray-800 top-6 right-0 z-10 select-none border dark:border-transparent border-gray-100 dropdown-menu-container">
+            <!-- Dropdown menus -->
+            <div class="w-full max-h-80 divide-y divide-gray-100 dark:divide-gray-700 text-left overflow-y-auto"
+              id="languages">
+              {{#each languages}}
+              <a class="block px-5 py-2.5" href="/compiler?lang={{this.language}}">{{this.languageName}}</a>
+              {{/each}}
+            </div>
+            <!-- Close dropdown menus -->
+            <div class="w-full h-screen fixed top-0 left-0 bottom-0 right-0 z-0 close-dropdown-menu"
+              style="z-index: -1;">
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="w-9 h-8 flex items-center justify-center bg-blue-600 focus:outline-none text-white rounded-md border border-blue-600"
+          id="execute">
+          <span class="execute-icon"><i class="fas fa-play fa-sm"></i></span>
+          <span class="hidden loading-icon"><i class="fa fa-cog fa-sm animate-spin-slow"></i></span>
+        </button>
+
+        <div class="relative px-1 py-1 dropdown-menu-icon">
+          <div class="w-full h-full flex items-center justify-center cursor-pointer">
+            <i class="fas fa-ellipsis-v fa-md"></i>
+          </div>
+          <!-- Dropdown menu container -->
+          <div
+            class="hidden origin-top-right absolute mt-5 py-1 w-40 rounded-md shadow-md bg-white dark:bg-gray-800 top-6 right-0 z-10 select-none border dark:border-transparent border-gray-100 dropdown-menu-container">
+            <!-- Dropdown menus -->
+            <div class="w-full max-h-80 divide-y divide-gray-100 dark:divide-gray-700 text-left overflow-y-auto">
+              <div class="px-4 py-2.5 cursor-pointer">
+                <a class="block w-full h-full download"><i class="fas fa-download fa-sm mr-2"></i> Download</a>
+              </div>
+              <div class="px-4 py-2.5 cursor-pointer">
+                <a class="block w-full h-full theme"><i class="fa fa-moon fa-sm theme-icon mr-2"></i> Theme</a>
+              </div>
+            </div>
+            <!-- Close dropdown menus -->
+            <div class="w-full h-screen fixed top-0 left-0 bottom-0 right-0 z-0 close-dropdown-menu"
+              style="z-index: -1;">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="w-full flex flex-col md:flex-row flex-grow overflow-hidden" id="split-view">
+
+      <div class="w-full h-4/6 md:w-2/4 md:h-full flex flex-col flex-shrink-0" id="code-split-view">
+        <!-- Code editor files -->
+        <div
+          class="w-full flex flex-shrink-0 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 gap-3">
+          <div class="flex flex-grow gap-3 md:gap-4 overflow-x-auto file-container">
+            <!-- files -->
+          </div>
+          <div class="flex justify-center">
+            <span class="px-4 py-2"><i class="fas fa-plus fa-sm cursor-pointer create-new-file"></i></span>
+          </div>
+        </div>
+
+        <!-- Code editor -->
+        <div class="w-full flex-grow text-base" id="editor"></div>
+      </div>
+
+      <div
+        class="flex flex-row md:flex-col flex-shrink-0 items-center justify-center gap-0.5 w-full h-3 md:w-3 md:h-full text-gray-400 dark:text-gray-600 bg-gray-100 dark:bg-gray-800"
+        id="resizer">
+        <i class="fa fa-circle" style="font-size: 6px"></i>
+        <i class="fa fa-circle" style="font-size: 6px"></i>
+        <i class="fa fa-circle" style="font-size: 6px"></i>
+      </div>
+
+      <div class="w-full flex flex-col flex-grow overflow-hidden" id="output-split-view">
+
+        <div class="w-full flex flex-shrink-0 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 gap-3">
+          <div class="flex flex-grow gap-3 md:gap-4 overflow-x-auto">
+            <div
+              class="flex items-center px-3 py-2 border-t-2 border-blue-600 gap-2 text-sm font-medium cursor-pointer output">
+              <span>Output</span>
+            </div>
+            <div
+              class="flex items-center px-3 py-2 border-t-2 border-transparent gap-2 text-sm font-medium cursor-pointer user-input">
+              <span>Input</span>
+            </div>
+          </div>
+          <div class="flex gap-3 px-3 justify-center">
+            <span class="py-2.5 text-sm truncate" id="output-time"></span>
+            <span class="py-2.5 text-sm truncate" id="memory-usage"></span>
+          </div>
+        </div>
+
+        <div class="w-full flex-grow overflow-hidden">
+
+          <div class="w-full h-full" id="output-container">
+            <div class="hidden w-full h-full flex items-center justify-center loading-icon">
+              <i class="fa fa-cog fa-2x text-gray-700 dark:text-gray-400 animate-spin-slow"></i>
+            </div>
+            <pre class="w-full h-full p-4 overflow-auto" id="output"></pre>
+            <iframe class="w-full h-full hidden" id="frame"></iframe>
+          </div>
+
+          <div class="hidden w-full h-full overflow-y-auto" id="input-container">
+            <div class="m-4">
+              <h1 class="text-md font-bold">User Input</h1>
+              <textarea name="input" placeholder="User input"
+                class="w-full h-36 xl:h-44 bg-gray-100 dark:bg-gray-800 focus:outline-none rounded-sm p-3 md:p-4 my-3"
+                id="stdin"></textarea>
+              <h1 class="text-md font-bold">CLI Arguments</h1>
+              <textarea name="args" placeholder="CLI Arguments"
+                class="w-full h-36 xl:h-44 bg-gray-100 dark:bg-gray-800 focus:outline-none rounded-sm p-3 md:p-4 my-3"
+                id="args"></textarea>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="/ace/src-noconflict/ace.js" charset="utf-8"></script>
+  <script src="/ace/src-noconflict/ext-language_tools.js" charset="utf-8"></script>
+  <script src="/ace/src-noconflict/ext-modelist.js" charset="utf-8"></script>
+  <script src="/js/editor.js" type="text/javascript"></script>
+  {{> script }}
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>{{title}}</title>
+  {{> meta }}
+  {{> style }}
+</head>
+
+<body class="bg-white dark:bg-gray-900">
+  <!-- Container -->
+  <div class="w-full">
+    {{> header }}
+
+    <div class="w-full min-h-screen pt-4 pb-8 dark:bg-gray-800">
+      <div class="w-full max-w-6xl px-4 md:px-6 mx-auto my-4 lg:my-6">
+        <div class="w-full">
+          <h2 class="text-xl font-bold">Terms of service</h2>
+          <span class="block w-8 h-1.5 bg-blue-600 rounded-md my-2"></span>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-4">
+        <div class="w-full max-w-6xl flex-grow px-4 md:px-6 mx-auto">
+          <p class="text-base leading-relaxed">If you wish to use our services (jitcompiler.com) you have to comply with
+            our terms of services.</p>
+          <h2 class="text-lg font-bold pt-6 pb-4">Use of website and services</h2>
+          <p class="text-base leading-relaxed">JITCompiler is free online code execution platform for students and
+            developer's. you can freely use our services and it's free for everyone. you are not permitted to misuse our
+            platform and we don't allow you to execute any malicious code that can harm us or anyone on the internet.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {{> footer }}
+  </div>
+  {{> script }}
+</body>
+
+</html>

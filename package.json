@@ -1,0 +1,26 @@
+{
+  "name": "compiler",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "build-css": "TAILWIND_MODE=build NODE_ENV=production npx tailwindcss build -c ./tailwind.config.js -i ./public/css/src/tailwind.css -o ./public/css/tailwind.css --minify"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
+    "express": "~4.16.1",
+    "express-rate-limit": "^5.5.1",
+    "hbs": "^4.1.2",
+    "http-errors": "~1.6.3",
+    "joi": "^17.6.0",
+    "morgan": "~1.9.1",
+    "pidusage": "^3.0.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.0.7"
+  }
+}

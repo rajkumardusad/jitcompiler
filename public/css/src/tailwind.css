@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-100 dark:bg-gray-900 text-black dark:text-gray-200 h-full;
+  }
+}
+
+@layer components {
+  .body-container {
+    @apply w-full h-full;
+  }
+
+  .header {
+    @apply h-14 md:h-20 bg-white dark:bg-gray-800 md:bg-transparent md:dark:bg-transparent md:ml-56 lg:ml-60;
+  }
+
+  .body {
+    @apply block md:ml-56 lg:ml-60 h-full md:mt-2 lg:mt-3;
+  }
+}

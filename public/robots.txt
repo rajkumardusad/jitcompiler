@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /developer
+
+Sitemap: http://jitcompiler.com/sitemap.xml

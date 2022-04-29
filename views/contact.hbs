@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>{{title}}</title>
+  <meta name="robots" content="noindex">
+  <meta name="googlebot" content="noindex">
+  {{> meta }}
+  {{> style }}
+</head>
+
+<body class="bg-white dark:bg-gray-900">
+  <!-- Container -->
+  <div class="w-full">
+    {{> header }}
+
+    <div class="w-full min-h-screen pt-4 pb-8 dark:bg-gray-800">
+      <div class="w-full max-w-6xl px-4 md:px-6 mx-auto my-4 lg:my-6">
+        <div class="w-full">
+          <h2 class="text-xl font-bold">Contact US</h2>
+          <span class="block w-8 h-1.5 bg-blue-600 rounded-md my-2"></span>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-4">
+        <div class="w-full max-w-6xl flex-grow px-4 md:px-6 mx-auto">
+          <p class="text-base">You are free to email us on following email address.</p>
+          <div class="flex items-center flex-wrap gap-2 py-4 text-blue-600">
+            <i class="fa fa-envelope"></i>
+            <a href="mailto: support@jitcompiler.com">support@jitcompiler.com</a>
+          </div>
+          <p class="text-base">Please contact us if</p>
+          <ul class="mx-6 lg:mx-8 my-4 list-disc text-base">
+            <li>You have any feedback or suggestions.</li>
+            <li>You have any issue regarding to compiler.</li>
+            <li>You want some new features.</li>
+            <li>You have identified some bug.</li>
+          </ul>
+          <p class="text-base">JIT Compiler is always ready for your valuable feedback.</p>
+        </div>
+      </div>
+    </div>
+
+    {{> footer }}
+  </div>
+  {{> script }}
+</body>
+
+</html>
