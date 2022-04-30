@@ -1,6 +1,6 @@
 ## JITCompiler
 
-JIT Compiler is a online code compiler for students and developer's.
+JIT Compiler is a open source online code compiler.
 You can run more than 40+ most popular programming languages in your browser just-in-time using jitcompiler.
 
 Our online compiler has a user friendly text editor with live auto-suggestion and syntax highlighting features.
@@ -48,3 +48,50 @@ We have used the best tools to build jitompiler.com
 - Ace Editor
 - Tailwind CSS
 - PWA
+
+## Supported Languages
+
+JIT Compiler supports more than 40+ most popular programming languages.
+
+- Assembly
+- BhaiLang
+- C
+- Cobol
+- C++
+- Crystal
+- C#
+- Dart
+- Elixir
+- Erlang
+- Fortran
+- F#
+- Golang
+- Groovy
+- Haskell
+- HTML/CSS
+- Java
+- JavaScript
+- Julia
+- Kotlin
+- Lisp
+- Lua
+- MySQL
+- Nim
+- Objective-C
+- Ocaml
+- Pascal
+- Perl
+- PHP
+- Python2
+- Python3
+- R
+- Ruby
+- Rust
+- Scala
+- Shell
+- SmallTalk
+- SQLite3
+- Swift
+- TCL
+- TypeScript
+- VB.NET
