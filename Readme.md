@@ -25,7 +25,7 @@ JIT Compiler provide lots of amazing features:
 
 ## Installation (Linux)
 
-Clone the jitcompiler github repository and run following command:
+Open your terminal and run following command:
 #### Clone the github repository
 ```bash
 git clone https://github.com/rajkumardusad/jitcompiler
