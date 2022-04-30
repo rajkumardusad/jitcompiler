@@ -23,7 +23,7 @@ JIT Compiler provide lots of amazing features:
 - Download your source code.
 - Create multiple files.
 
-# Installation
+# Installation (Linux)
 
 Clone the jitcompiler github repository and run following command:
 #### Clone the github repository
