@@ -10,7 +10,7 @@ You can write compile and run your code in single click in your browser even in 
 
 <br>
 <div align="center">
-  <img width="90%" src="public/img/d-scr-d.png"/>
+  <img width="90%" src="public/img/features-d-d.png"/>
 </div>
 <br>
 
