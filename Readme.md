@@ -42,7 +42,7 @@ npm start
 It will start server at http://localhost:3000
 
 ## Our Tech Stack
-We have used the best tools to build jitompiler.com
+We have used the best tools to build jitompiler.
 - ExpressJs (Node Js)
 - Docker
 - Ace Editor
